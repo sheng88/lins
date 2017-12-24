@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/lin-scala/lin-scala.iml" filepath="$PROJECT_DIR$/lin-scala/lin-scala.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lins.iml" filepath="$PROJECT_DIR$/lins.iml" />
+    </modules>
+  </component>
+</project>
