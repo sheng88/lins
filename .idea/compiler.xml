@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="lin-java" />
+        <module name="lin-scala" />
+        <module name="lin-spark" />
+        <module name="lin-sparksql" />
+        <module name="lin-storm" />
+      </profile>
+    </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="lin-java" target="1.5" />
+      <module name="lin-scala" target="1.5" />
+      <module name="lin-spark" target="1.5" />
+      <module name="lin-sparksql" target="1.5" />
+      <module name="lin-storm" target="1.5" />
       <module name="lins" target="1.5" />
     </bytecodeTargetLevel>
   </component>

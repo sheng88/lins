@@ -4,6 +4,9 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/lin-scala/pom.xml" />
+        <option value="$PROJECT_DIR$/lin-storm/pom.xml" />
+        <option value="$PROJECT_DIR$/lin-sparksql/pom.xml" />
       </list>
     </option>
   </component>

@@ -1,0 +1,62 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.lins</groupId>
+    <artifactId>lin-java</artifactId>
+    <version>@{parent.version}</version>
+    <packaging>jar</packaging>
+
+    <properties>
+        <maven.release.plugin.version>2.5.3</maven.release.plugin.version>
+        <scm.plugin.version>1.9.2</scm.plugin.version>
+        <scm.plugin.version>1.9.2</scm.plugin.version>
+        <mven.shade.plugin.version>3.1.0</mven.shade.plugin.version>
+        <jar.plugin.version>2.6</jar.plugin.version>
+    </properties>
+
+    <build>
+        <sourceDirectory>src/main/java</sourceDirectory>
+        <testSourceDirectory>src/test/java</testSourceDirectory>
+        <plugins>
+            <plugin>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>${maven.release.plugin.version}</version>
+                <configuration>
+                    <tagNameFormat>${project.artifactId}-@{project.version}</tagNameFormat>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-api</artifactId>
+                        <version>${scm.plugin.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-provider-gitexe</artifactId>
+                        <version>${scm.plugin.version}</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+            <plugin>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>${jar.plugin.version}</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+            <!-- Used for manipulating content, such as merging files and relocating files, before generating a jar.
+            <plugin>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>${mven.shade.plugin.version}</version>
+
+            </plugin>
+            -->
+        </plugins>
+    </build>
+</project>

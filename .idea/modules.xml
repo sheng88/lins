@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/lin-java/lin-java.iml" filepath="$PROJECT_DIR$/lin-java/lin-java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lin-python/lin-python.iml" filepath="$PROJECT_DIR$/lin-python/lin-python.iml" />
       <module fileurl="file://$PROJECT_DIR$/lin-scala/lin-scala.iml" filepath="$PROJECT_DIR$/lin-scala/lin-scala.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lin-spark/lin-spark.iml" filepath="$PROJECT_DIR$/lin-spark/lin-spark.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lin-storm/lin-storm.iml" filepath="$PROJECT_DIR$/lin-storm/lin-storm.iml" />
       <module fileurl="file://$PROJECT_DIR$/lins.iml" filepath="$PROJECT_DIR$/lins.iml" />
     </modules>
   </component>
