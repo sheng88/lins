@@ -59,4 +59,11 @@ public class Utils {
         }
         return result;
     }
+
+    public static boolean isNullOrEmptyStr(String str){
+        if(null == str || "".equals(str.trim())){
+            return true;
+        }
+        return false;
+    }
 }
