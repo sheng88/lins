@@ -13,13 +13,15 @@
         <scm.plugin.version>1.9.1</scm.plugin.version>
         <jar.plugin.version>2.6</jar.plugin.version>
         <maven-shade-plugin.version>2.4.3</maven-shade-plugin.version>
-        <scala.version>2.12.2</scala.version>
+        <scala.version>2.11.11</scala.version>
+        <scala.compact.version>2.11</scala.compact.version>
         <junit.version>4.12</junit.version>
         <specs.version>1.2.5</specs.version>
         <tfa-common.version>0.0.1</tfa-common.version>
-        <spark.version>2.1.0</spark.version>
+        <spark.version>2.2.0</spark.version>
         <spark-xml.version>0.4.1</spark-xml.version>
-        <scala-reflect.version>2.12.2</scala-reflect.version>
+        <scala-reflect.version>2.11.11</scala-reflect.version>
+        <hdfs.version>2.7.4</hdfs.version>
     </properties>
 
     <repositories>
@@ -62,25 +64,32 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>com.rbc.jy10.tfa.common</groupId>
-            <artifactId>tfa-common</artifactId>
-            <version>${tfa-common.version}</version>
+            <groupId>com.lins</groupId>
+            <artifactId>lin-java</artifactId>
+            <version>@{parent.version}</version>
         </dependency>
 
         <!-- Spark dependency -->
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-core_2.10</artifactId>
+            <artifactId>spark-core_${scala.compact.version}</artifactId>
             <version>${spark.version}</version>
         </dependency>
+        <!-- Spark access HDFS -->
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-client</artifactId>
+            <version>${hdfs.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-sql_2.10</artifactId>
+            <artifactId>spark-sql_${scala.compact.version}</artifactId>
             <version>${spark.version}</version>
         </dependency>
         <dependency>
             <groupId>com.databricks</groupId>
-            <artifactId>spark-xml_2.11</artifactId>
+            <artifactId>spark-xml_${scala.compact.version}</artifactId>
             <version>${spark-xml.version}</version>
         </dependency>
         <dependency>
@@ -95,8 +104,8 @@
         </dependency>
         <dependency>
             <groupId>xerces</groupId>
-            <artifactId>xerces</artifactId>
-            <version>2.4.0</version>
+            <artifactId>xercesImpl</artifactId>
+            <version>2.11.0</version>
         </dependency>
     </dependencies>
 
